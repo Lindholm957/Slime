@@ -27,11 +27,19 @@ namespace Project.Scripts.Slime
         {
             StartMoving();
             GlobalEventSystem.I.Subscribe(EventNames.Enemy.BecameVisible, OnEnemyBecameVisible);
+            GlobalEventSystem.I.Subscribe(EventNames.Enemy.Died, OnEnemyDied);
         }
 
         private void OnEnemyBecameVisible(GameEventArgs arg)
         {
             StartAttack();
+        }
+        
+        private void OnEnemyDied(GameEventArgs arg)
+        {
+            shooting.StopShooting();
+
+            StartMoving();
         }
 
         private void StartMoving()
@@ -72,6 +80,7 @@ namespace Project.Scripts.Slime
         private void OnDestroy()
         {
             GlobalEventSystem.I.Unsubscribe(EventNames.Enemy.BecameVisible, OnEnemyBecameVisible);
+            GlobalEventSystem.I.Unsubscribe(EventNames.Enemy.Died, OnEnemyDied);
         }
     }
 }

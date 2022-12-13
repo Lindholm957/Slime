@@ -13,6 +13,7 @@ namespace Project.Scripts.Game
         [SerializeField] private float enemySpawnDistance;
 
         private GameObject _enemy;
+        private int _waveNum = 1;
 
         public GameObject Slime => slime;
 
@@ -20,6 +21,7 @@ namespace Project.Scripts.Game
         {
             I = this;
             GlobalEventSystem.I.Subscribe(EventNames.Slime.Stopped, OnSlimeStopped);
+            GlobalEventSystem.I.Subscribe(EventNames.Enemy.Died, OnEnemyDied);
         }
 
         private void OnSlimeStopped(GameEventArgs arg0)
@@ -31,10 +33,16 @@ namespace Project.Scripts.Game
             
             _enemy = Instantiate(enemyPrefab, enemyZSpawnPoint, Quaternion.Euler(0, 0, 0));
         }
+        
+        private void OnEnemyDied(GameEventArgs arg0)
+        {
+            _waveNum++;
+        }
 
         private void OnDestroy()
         {
             GlobalEventSystem.I.Unsubscribe(EventNames.Slime.Stopped, OnSlimeStopped);
+            GlobalEventSystem.I.Unsubscribe(EventNames.Enemy.Died, OnEnemyDied);
         }
     }
 }

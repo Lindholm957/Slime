@@ -1964,6 +1964,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 27177912}
     m_Modifications:
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1727220807}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AttackSpeedLvlUpClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Project.Scripts.UI.UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5260710489067529697, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
       propertyPath: m_text
       value: 1
@@ -1976,6 +2004,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 82b7db2d991a2374dae91c0bf49f7d17, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1727220807}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AttackSpeedLvlUpClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Project.Scripts.UI.UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7472507048511540401, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
       propertyPath: m_Color.b
       value: 0.8039216
@@ -2088,7 +2144,8 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4282006074
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
 --- !u!224 &1630540930 stripped
 RectTransform:
@@ -2158,6 +2215,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 27177912}
     m_Modifications:
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1727220807}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthPointsLvlUpClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Project.Scripts.UI.UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5260710489067529697, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -2197,6 +2282,34 @@ PrefabInstance:
     - target: {fileID: 7472507048366642432, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -19.299995
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1727220807}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthPointsLvlUpClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Project.Scripts.UI.UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7472507048511540401, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
       propertyPath: m_Color.b
@@ -2469,6 +2582,7 @@ GameObject:
   - component: {fileID: 1727220804}
   - component: {fileID: 1727220805}
   - component: {fileID: 1727220806}
+  - component: {fileID: 1727220807}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2537,10 +2651,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b073ba48ee5241f19dd15c430fd7417b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numOfSoftCoins: 0
-  totalDamage: 10
-  attackSpeed: 1
-  healthPoints: 110
+  totalDamageUpValue: 10
+  attackSpeedUpValue: 0.1
+  healthPointsUpValue: 10
+--- !u!114 &1727220807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727220802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785cb56582a44fcc83690a142b58de40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1731810933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +3283,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 27177912}
     m_Modifications:
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1727220807}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TotalDamageLvlUpClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Project.Scripts.UI.UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299959968025295902, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5260710489067529697, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
       propertyPath: m_fontSize
       value: 47.1
@@ -3174,6 +3327,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a76ee71ee6e1e6c409694cf38c293622, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1727220807}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TotalDamageLvlUpClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Project.Scripts.UI.UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7472507048511540558, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}
       propertyPath: m_Name
       value: Total Damage Item
@@ -3266,5 +3447,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4282006074
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: bd8b1d65624777740b46f90ccfab3f71, type: 3}

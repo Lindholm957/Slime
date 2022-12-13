@@ -12,7 +12,12 @@ namespace Project.Scripts.Slime.Shooting
             var repeatRate = 1 / attackSpeed;
             InvokeRepeating("Shoot", 1, repeatRate);
         }
-        
+
+        public void StopShooting()
+        {
+            CancelInvoke();
+        }
+
         private void Shoot()
         {
             var ball = Instantiate(ballPrefab, transform.position, Quaternion.identity);

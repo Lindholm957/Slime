@@ -134,4 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMesh: {fileID: 5615864701624577448}
-  healthPoints: 15
+  healthPoints: 40
+  numOfCoins: 47

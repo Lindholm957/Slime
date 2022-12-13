@@ -1,9 +1,10 @@
+using Project.Scripts.Data;
 using Project.Scripts.Events.Base;
 using Project.Scripts.Events.Systems;
 using TMPro;
 using UnityEngine;
 
-namespace Project.Scripts.Data
+namespace Project.Scripts.UI
 {
     public class UIPlayerData : MonoBehaviour
     {
