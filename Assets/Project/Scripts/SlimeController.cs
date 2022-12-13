@@ -1,4 +1,5 @@
-using System;
+using Project.Scripts.Events.Base;
+using Project.Scripts.Events.Systems;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -23,9 +24,10 @@ namespace Project.Scripts
         private void Awake()
         {
             StartMoving();
+            GlobalEventSystem.I.Subscribe(EventNames.Enemy.BecameVisible, OnEnemyBecameVisible);
         }
 
-        private void OnEnemyBecameVisible()
+        private void OnEnemyBecameVisible(GameEventArgs arg)
         {
             StartAttack();
         }
@@ -41,12 +43,13 @@ namespace Project.Scripts
         private void StopAndAwait()
         {
             _curState = SlimeState.Idle;
+            GlobalEventSystem.I.SendEvent(EventNames.Slime.Stopped,
+                new GameEventArgs(null));
         }
 
         private void StartAttack()
         {
             _curState = SlimeState.Attacking;
-
         }
         
 
@@ -61,6 +64,11 @@ namespace Project.Scripts
                     StopAndAwait();
                 }
             }
+        }
+
+        private void OnDestroy()
+        {
+            GlobalEventSystem.I.Unsubscribe(EventNames.Enemy.BecameVisible, OnEnemyBecameVisible);
         }
     }
 }
