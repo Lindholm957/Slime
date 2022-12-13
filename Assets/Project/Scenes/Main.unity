@@ -1016,7 +1016,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947213864}
-  m_LocalRotation: {x: 0.075443506, y: -0.7181711, z: 0.078837015, w: 0.68725777}
+  m_LocalRotation: {x: 0.07544352, y: -0.7181711, z: 0.07883703, w: 0.68725777}
   m_LocalPosition: {x: 25.22, y: 0.6999998, z: 6.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1140,7 +1140,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.075443506, y: -0.7181711, z: 0.078837015, w: 0.68725777}
+  m_LocalRotation: {x: 0.07544352, y: -0.7181711, z: 0.07883703, w: 0.68725777}
   m_LocalPosition: {x: 25.22, y: 0.6999998, z: 6.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2090,7 +2090,7 @@ Transform:
   - {fileID: 686511622}
   - {fileID: 1217750953850282650}
   m_Father: {fileID: 1731810934}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1657988351 stripped
 RectTransform:
@@ -2324,6 +2324,7 @@ GameObject:
   - component: {fileID: 1727220803}
   - component: {fileID: 1727220804}
   - component: {fileID: 1727220805}
+  - component: {fileID: 1727220806}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2377,6 +2378,21 @@ MonoBehaviour:
   slime: {fileID: 1949047385}
   enemyPrefab: {fileID: 5615864701624577493, guid: 3b9a32e4f4c5e468ba7ad349de797e6f, type: 3}
   enemySpawnDistance: 15
+--- !u!114 &1727220806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727220802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073ba48ee5241f19dd15c430fd7417b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalDamage: 10
+  attackSpeed: 5
+  healthPoints: 50
 --- !u!1 &1731810933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,8 +2422,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 664869020}
-  - {fileID: 1949047389}
   - {fileID: 1641285915}
+  - {fileID: 1949047389}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2794,11 +2810,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7365855710678245017, guid: 8dd9e8071da1a40a49ba0ccb1e818da7, type: 3}
   m_PrefabInstance: {fileID: 7365855711419319492}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &1949047391 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 7365855710678245019, guid: 8dd9e8071da1a40a49ba0ccb1e818da7, type: 3}
-  m_PrefabInstance: {fileID: 7365855711419319492}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1995352392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2983,9 +2994,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7365855710678245018, guid: 8dd9e8071da1a40a49ba0ccb1e818da7, type: 3}
-      propertyPath: navMesh
+      propertyPath: ballPrefab
       value: 
-      objectReference: {fileID: 1949047391}
+      objectReference: {fileID: 6806916071438851734, guid: d8af04e8b06d94b548d35a1dfa8bea01, type: 3}
     - target: {fileID: 7365855710678245021, guid: 8dd9e8071da1a40a49ba0ccb1e818da7, type: 3}
       propertyPath: m_Name
       value: Slime

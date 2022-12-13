@@ -1,13 +1,15 @@
+using Project.Scripts.Data;
 using Project.Scripts.Events.Base;
 using Project.Scripts.Events.Systems;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Project.Scripts
+namespace Project.Scripts.Slime
 {
     public class SlimeController : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent navMesh;
+        [SerializeField] private Shooting.Shooting shooting;
         [SerializeField] private int targetDistance;
         
         private float _destinationReachedThreshold = 0.5f;
@@ -50,6 +52,7 @@ namespace Project.Scripts
         private void StartAttack()
         {
             _curState = SlimeState.Attacking;
+            shooting.StartShooting(PlayerSkillsData.I.AttackSpeed);
         }
         
 
