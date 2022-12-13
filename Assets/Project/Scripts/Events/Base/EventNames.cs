@@ -6,7 +6,12 @@ namespace Project.Scripts.Events.Base
         public static readonly string[] TEXT_ALL_NAMES = new[]
         {
             Slime.Stopped,
-            Enemy.BecameVisible
+            Enemy.BecameVisible,
+            Enemy.Died,
+            Data.SoftCoinChanged,
+            Data.TotalDamageChanged,
+            Data.AttackSpeedChanged,
+            Data.HealthPointsChanged
         };
 
         public static class Game
@@ -22,6 +27,15 @@ namespace Project.Scripts.Events.Base
         public static class Enemy
         {
             public static string BecameVisible => "became_visible";
+            public static string Died => "died";
+        }
+        
+        public static class Data
+        {
+            public static string SoftCoinChanged => "soft_coin_changed";
+            public static string TotalDamageChanged => "total_damage_changed";
+            public static string AttackSpeedChanged => "attack_speed_changed";
+            public static string HealthPointsChanged => "health_points_changed";
         }
     }
 }

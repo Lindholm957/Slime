@@ -52,7 +52,7 @@ namespace Project.Scripts.Slime
         private void StartAttack()
         {
             _curState = SlimeState.Attacking;
-            shooting.StartShooting(PlayerSkillsData.I.AttackSpeed);
+            shooting.StartShooting(PlayerData.I.AttackSpeed);
         }
         
 

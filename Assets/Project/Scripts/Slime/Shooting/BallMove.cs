@@ -8,10 +8,13 @@ namespace Project.Scripts.Slime.Shooting
         [SerializeField] int speed = 50;
         
         private float _damage;
+        private float _timeToDestruct = 3f;
         private Vector3 _previousStep;
 
         void Awake ()
         {
+            Invoke ("DestroyNow", _timeToDestruct);
+
             rb.velocity = transform.TransformDirection(Vector3.forward * speed);
 
             _previousStep = gameObject.transform.position;
@@ -60,6 +63,11 @@ namespace Project.Scripts.Slime.Shooting
                     SendMessageOptions.DontRequireReceiver);
                 Destroy(gameObject);
             }
+        }
+        
+        void DestroyNow ()
+        {
+            DestroyObject(gameObject);
         }
     }
 }

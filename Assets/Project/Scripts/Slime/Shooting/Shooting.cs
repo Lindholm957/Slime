@@ -16,7 +16,7 @@ namespace Project.Scripts.Slime.Shooting
         private void Shoot()
         {
             var ball = Instantiate(ballPrefab, transform.position, Quaternion.identity);
-            ball.GetComponent<BallMove>().SetBallDamage(PlayerSkillsData.I.TotalDamage);
+            ball.GetComponent<BallMove>().SetBallDamage(PlayerData.I.TotalDamage);
         }
     }
 }

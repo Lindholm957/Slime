@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5615864701624577448}
   - component: {fileID: 5615864701624577451}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyEasy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMesh: {fileID: 5615864701624577448}
+  healthPoints: 15
