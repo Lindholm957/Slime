@@ -1,6 +1,7 @@
 using Project.Scripts.Data;
 using Project.Scripts.Events.Base;
 using Project.Scripts.Events.Systems;
+using Project.Scripts.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,6 +10,7 @@ namespace Project.Scripts.Slime
     public class SlimeController : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent navMesh;
+        [SerializeField] private HealthBar healthBar;
         [SerializeField] private Shooting.Shooting shooting;
         [SerializeField] private int targetDistance;
 
@@ -25,10 +27,12 @@ namespace Project.Scripts.Slime
         }
 
         public int HealthPoints => _healthPoints;
+        public HealthBar SlimeHPBar => healthBar;
 
         private void Awake()
         {
             StartMoving();
+            healthBar.UpdateHealthBar(_healthPoints, PlayerData.I.MaxHealthPoints);
             
             GlobalEventSystem.I.Subscribe(EventNames.Enemy.BecameVisible, OnEnemyBecameVisible);
             GlobalEventSystem.I.Subscribe(EventNames.Enemy.Died, OnEnemyDied);
@@ -76,9 +80,16 @@ namespace Project.Scripts.Slime
         
         private void ApplyDamage(int damage)
         {
-            if ((_healthPoints -= damage) <= 0)
+            _healthPoints -= damage;
+
+            if (_healthPoints <= 0)
             {
+                healthBar.UpdateHealthBar(0, PlayerData.I.MaxHealthPoints);
                 Destroy(gameObject);
+            }
+            else
+            {
+                healthBar.UpdateHealthBar(_healthPoints, PlayerData.I.MaxHealthPoints);
             }
         }
         

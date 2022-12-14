@@ -1,6 +1,8 @@
 using System;
 using Project.Scripts.Events.Base;
 using Project.Scripts.Events.Systems;
+using Project.Scripts.Game;
+using Project.Scripts.Slime;
 using UnityEngine;
 
 namespace Project.Scripts.Data
@@ -60,6 +62,10 @@ namespace Project.Scripts.Data
             _maxHealthPoints += maxHealthPointsUpValue;
             GlobalEventSystem.I.SendEvent(EventNames.Data.MaxHealthPointsChanged,
                 new GameEventArgs(null));
+            
+            var slimeController = GameManager.I.Slime.GetComponent<SlimeController>();
+            slimeController.SlimeHPBar.
+                UpdateHealthBar(slimeController.HealthPoints,MaxHealthPoints);
         }
         
     }

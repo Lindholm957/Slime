@@ -3,6 +3,7 @@ using Project.Scripts.Data;
 using Project.Scripts.Events.Base;
 using Project.Scripts.Events.Systems;
 using Project.Scripts.Game;
+using Project.Scripts.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,12 +12,14 @@ namespace Project.Scripts.Enemy
     public class EnemyController : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent navMesh;
-        [SerializeField] private float healthPoints;
+        [SerializeField] private HealthBar healthBar;
+        [SerializeField] private int maxHealthPoints;
         [SerializeField] private int numOfCoins = 47;
         [SerializeField] private int damage = 20;
         [SerializeField] private float attackSpeed = 1;
 
         private Transform _target;
+        private int _healthPoints;
         private State _curState = State.Moving;
 
         private enum State
@@ -27,6 +30,10 @@ namespace Project.Scripts.Enemy
         
         private void Start()
         {
+            _healthPoints = maxHealthPoints;
+            
+            healthBar.UpdateHealthBar(_healthPoints, maxHealthPoints);
+
             _target = GameManager.I.Slime.transform;
 
             navMesh.SetDestination(_target.position);
@@ -55,12 +62,18 @@ namespace Project.Scripts.Enemy
 
         private void ApplyDamage(float damage)
         {
-            if ((healthPoints -= damage) <= 0)
+            _healthPoints -= Mathf.RoundToInt(damage);
+
+            if (_healthPoints <= 0)
             {
                 GlobalEventSystem.I.SendEvent(EventNames.Enemy.Died, new GameEventArgs(null));
                 PlayerData.I.SoftCoinValChange(PlayerData.I.NumOfSoftCoins + numOfCoins);
                 
                 Destroy(gameObject);
+            }
+            else
+            {
+                healthBar.UpdateHealthBar(_healthPoints, PlayerData.I.MaxHealthPoints);
             }
         }
 

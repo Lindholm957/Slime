@@ -1,4 +1,6 @@
 ﻿using Project.Scripts.Data;
+using Project.Scripts.Game;
+using Project.Scripts.Slime;
 using TMPro;
 using UnityEngine;
 
