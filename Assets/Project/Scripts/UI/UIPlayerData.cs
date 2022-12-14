@@ -16,12 +16,12 @@ namespace Project.Scripts.UI
         [SerializeField] private TMP_Text attackSpeedLvl;
         [SerializeField] private TMP_Text attackSpeedVal;
         [Space]
-        [SerializeField] private TMP_Text healthPointsLvl;
-        [SerializeField] private TMP_Text healthPointsVal;
+        [SerializeField] private TMP_Text maxHealthPointsLvl;
+        [SerializeField] private TMP_Text maxHealthPointsVal;
 
         private int _totalDamageLvl = 1;
         private int _attackSpeedLvl = 1; 
-        private int _healthPointsLvl = 1; 
+        private int _maxHealthPointsLvl = 1; 
 
 
         private void Awake()
@@ -29,7 +29,7 @@ namespace Project.Scripts.UI
             GlobalEventSystem.I.Subscribe(EventNames.Data.SoftCoinChanged, OnSoftCoinChanged);
             GlobalEventSystem.I.Subscribe(EventNames.Data.TotalDamageChanged, OnTotalDamageChanged);
             GlobalEventSystem.I.Subscribe(EventNames.Data.AttackSpeedChanged, OnAttackSpeedChanged);
-            GlobalEventSystem.I.Subscribe(EventNames.Data.HealthPointsChanged, OnHealthPointsChanged);
+            GlobalEventSystem.I.Subscribe(EventNames.Data.MaxHealthPointsChanged, OnHealthPointsChanged);
         }
         
         private void OnSoftCoinChanged(GameEventArgs arg0)
@@ -55,10 +55,10 @@ namespace Project.Scripts.UI
 
         private void OnHealthPointsChanged(GameEventArgs arg0)
         {
-            _healthPointsLvl++;
+            _maxHealthPointsLvl++;
 
-            healthPointsLvl.text = _healthPointsLvl.ToString();
-            healthPointsVal.text = PlayerData.I.HealthPoints.ToString();
+            maxHealthPointsLvl.text = _maxHealthPointsLvl.ToString();
+            maxHealthPointsVal.text = PlayerData.I.MaxHealthPoints.ToString();
         }
 
         private void OnDestroy()
@@ -66,7 +66,7 @@ namespace Project.Scripts.UI
             GlobalEventSystem.I.Unsubscribe(EventNames.Data.SoftCoinChanged, OnSoftCoinChanged);
             GlobalEventSystem.I.Unsubscribe(EventNames.Data.TotalDamageChanged, OnTotalDamageChanged);
             GlobalEventSystem.I.Unsubscribe(EventNames.Data.AttackSpeedChanged, OnAttackSpeedChanged);
-            GlobalEventSystem.I.Unsubscribe(EventNames.Data.HealthPointsChanged, OnHealthPointsChanged);
+            GlobalEventSystem.I.Unsubscribe(EventNames.Data.MaxHealthPointsChanged, OnHealthPointsChanged);
         }
     }
 }

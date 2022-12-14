@@ -136,3 +136,5 @@ MonoBehaviour:
   navMesh: {fileID: 5615864701624577448}
   healthPoints: 40
   numOfCoins: 47
+  damage: 20
+  attackSpeed: 1

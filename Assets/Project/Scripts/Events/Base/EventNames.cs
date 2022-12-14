@@ -11,7 +11,7 @@ namespace Project.Scripts.Events.Base
             Data.SoftCoinChanged,
             Data.TotalDamageChanged,
             Data.AttackSpeedChanged,
-            Data.HealthPointsChanged
+            Data.MaxHealthPointsChanged
         };
 
         public static class Game
@@ -35,7 +35,7 @@ namespace Project.Scripts.Events.Base
             public static string SoftCoinChanged => "soft_coin_changed";
             public static string TotalDamageChanged => "total_damage_changed";
             public static string AttackSpeedChanged => "attack_speed_changed";
-            public static string HealthPointsChanged => "health_points_changed";
+            public static string MaxHealthPointsChanged => "max_health_points_changed";
         }
     }
 }

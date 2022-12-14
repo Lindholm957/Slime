@@ -13,9 +13,18 @@ namespace Project.Scripts.Enemy
         [SerializeField] private NavMeshAgent navMesh;
         [SerializeField] private float healthPoints;
         [SerializeField] private int numOfCoins = 47;
+        [SerializeField] private int damage = 20;
+        [SerializeField] private float attackSpeed = 1;
 
         private Transform _target;
+        private State _curState = State.Moving;
 
+        private enum State
+        {
+            Moving,
+            Attacking
+        }
+        
         private void Awake()
         {
             _target = GameManager.I.Slime.transform;
@@ -23,6 +32,25 @@ namespace Project.Scripts.Enemy
             navMesh.SetDestination(_target.position);
             GlobalEventSystem.I.SendEvent(EventNames.Enemy.BecameVisible,
                 new GameEventArgs(gameObject));
+        }
+
+        private void StartAttacking()
+        {
+            _curState = State.Attacking;
+
+            var repeatRate = 1 / attackSpeed;
+            InvokeRepeating("Attack", 1, repeatRate);
+        }
+
+        private void Attack()
+        {
+            SendDamage(_target.gameObject);
+        }
+        
+        private void SendDamage(GameObject hit)
+        {
+            hit.SendMessage("ApplyDamage", damage,
+                    SendMessageOptions.DontRequireReceiver);
         }
 
         private void ApplyDamage(float damage)
@@ -33,6 +61,20 @@ namespace Project.Scripts.Enemy
                 PlayerData.I.SoftCoinValChange(PlayerData.I.NumOfSoftCoins + numOfCoins);
                 
                 Destroy(gameObject);
+            }
+        }
+
+        private void Update()
+        {
+            if (_curState == State.Moving)
+            {
+                float distanceToTarget = Vector3.Distance(transform.position, _target.position);
+                Debug.Log(distanceToTarget);
+
+                if (distanceToTarget < navMesh.stoppingDistance)
+                {
+                    StartAttacking();
+                }
             }
         }
     }
