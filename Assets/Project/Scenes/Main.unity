@@ -2581,8 +2581,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slime: {fileID: 1949047385}
-  enemyPrefab: {fileID: 5615864701624577493, guid: 3b9a32e4f4c5e468ba7ad349de797e6f, type: 3}
   enemySpawnDistance: 15
+  enemyPrefabs:
+  - {fileID: 5615864701624577493, guid: c0b0d866402974995b15671f4b8fd4ee, type: 3}
+  - {fileID: 5615864701624577493, guid: c0b0d866402974995b15671f4b8fd4ee, type: 3}
+  - {fileID: 5615864701624577493, guid: 0ce401914f8884c18946da8e74c2669f, type: 3}
+  - {fileID: 5615864701624577493, guid: 0ce401914f8884c18946da8e74c2669f, type: 3}
+  - {fileID: 5615864701624577493, guid: 1540f1709cbdb44efaa74f99c32df182, type: 3}
+  - {fileID: 5615864701624577493, guid: 1540f1709cbdb44efaa74f99c32df182, type: 3}
+  - {fileID: 5615864701624577493, guid: be0c7751ceebb427495c0b7a37fab16a, type: 3}
+  - {fileID: 5615864701624577493, guid: be0c7751ceebb427495c0b7a37fab16a, type: 3}
+  - {fileID: 5615864701624577493, guid: efb0cd1cc33f642678ab9af7db734b85, type: 3}
+  - {fileID: 5615864701624577493, guid: efb0cd1cc33f642678ab9af7db734b85, type: 3}
 --- !u!114 &1727220806
 MonoBehaviour:
   m_ObjectHideFlags: 0

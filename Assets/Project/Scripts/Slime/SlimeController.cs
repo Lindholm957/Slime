@@ -38,7 +38,7 @@ namespace Project.Scripts.Slime
 
         private void OnEnemyBecameVisible(GameEventArgs arg)
         {
-            // StartAttack();
+            StartAttack();
         }
         
         private void OnMaxHealthPointsChanged(GameEventArgs arg)

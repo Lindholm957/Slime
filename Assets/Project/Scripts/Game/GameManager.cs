@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Project.Scripts.Events.Base;
 using Project.Scripts.Events.Systems;
 using UnityEngine;
@@ -9,8 +10,8 @@ namespace Project.Scripts.Game
     {
         public static GameManager I { get; set; }
         [SerializeField] private GameObject slime;
-        [SerializeField] private GameObject enemyPrefab;
         [SerializeField] private float enemySpawnDistance;
+        [SerializeField] private List<GameObject> enemyPrefabs;
 
         private GameObject _enemy;
         private int _waveNum = 1;
@@ -29,9 +30,18 @@ namespace Project.Scripts.Game
             var slimePosition = slime.transform.position;
             
             var enemyZSpawnPoint = new Vector3(slimePosition.x,
-                slimePosition.y, slimePosition.z + enemySpawnDistance); 
-            
-            _enemy = Instantiate(enemyPrefab, enemyZSpawnPoint, Quaternion.Euler(0, 0, 0));
+                slimePosition.y, slimePosition.z + enemySpawnDistance);
+
+            if (_waveNum != enemyPrefabs.Count)
+            {
+                _enemy = Instantiate(enemyPrefabs[_waveNum-1], enemyZSpawnPoint, 
+                    Quaternion.Euler(0, 0, 0));
+            }
+            else
+            {
+                _enemy = Instantiate(enemyPrefabs[enemyPrefabs.Count-1], enemyZSpawnPoint, 
+                    Quaternion.Euler(0, 0, 0));
+            }
         }
         
         private void OnEnemyDied(GameEventArgs arg0)
