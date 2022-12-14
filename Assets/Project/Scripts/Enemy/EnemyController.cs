@@ -69,7 +69,6 @@ namespace Project.Scripts.Enemy
             if (_curState == State.Moving)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, _target.position);
-                Debug.Log(distanceToTarget);
 
                 if (distanceToTarget < navMesh.stoppingDistance)
                 {
