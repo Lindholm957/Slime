@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Project.Scripts.Events.Base;
 using Project.Scripts.Events.Systems;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Project.Scripts.Game
 {
@@ -29,24 +30,23 @@ namespace Project.Scripts.Game
         {
             var slimePosition = slime.transform.position;
             
-            var enemyZSpawnPoint = new Vector3(slimePosition.x,
-                slimePosition.y, slimePosition.z + enemySpawnDistance);
+            var enemyZSpawnPoint = new Vector3(slimePosition.x, 0, slimePosition.z + enemySpawnDistance);
 
             if (_waveNum != enemyPrefabs.Count)
             {
-                _enemy = Instantiate(enemyPrefabs[_waveNum-1], enemyZSpawnPoint, 
-                    Quaternion.Euler(0, 0, 0));
+                _enemy = Instantiate(enemyPrefabs[_waveNum - 1]);
             }
             else
             {
-                _enemy = Instantiate(enemyPrefabs[enemyPrefabs.Count-1], enemyZSpawnPoint, 
-                    Quaternion.Euler(0, 0, 0));
+                _enemy = Instantiate(enemyPrefabs[enemyPrefabs.Count-1]);
             }
+
+            _enemy.GetComponent<NavMeshAgent>().Warp(enemyZSpawnPoint);
         }
         
         private void OnEnemyDied(GameEventArgs arg0)
         {
-            _waveNum++;
+            ++_waveNum;
         }
 
         private void OnDestroy()

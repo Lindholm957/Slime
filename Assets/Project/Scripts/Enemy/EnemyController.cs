@@ -25,7 +25,7 @@ namespace Project.Scripts.Enemy
             Attacking
         }
         
-        private void Awake()
+        private void Start()
         {
             _target = GameManager.I.Slime.transform;
 
@@ -72,6 +72,7 @@ namespace Project.Scripts.Enemy
 
                 if (distanceToTarget < navMesh.stoppingDistance)
                 {
+                    navMesh.isStopped = true;
                     StartAttacking();
                 }
             }
