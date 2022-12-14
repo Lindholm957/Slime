@@ -10,7 +10,7 @@ namespace Project.Scripts.Slime.Shooting
         public void StartShooting(float attackSpeed)
         {
             var repeatRate = 1 / attackSpeed;
-            InvokeRepeating("Shoot", 1, repeatRate);
+            InvokeRepeating("Shoot", repeatRate, repeatRate);
         }
 
         public void StopShooting()

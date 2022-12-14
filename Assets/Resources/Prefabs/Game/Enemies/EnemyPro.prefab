@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMesh: {fileID: 5615864701624577448}
-  healthPoints: 800
+  healthPoints: 400
   numOfCoins: 300
   damage: 60
   attackSpeed: 3

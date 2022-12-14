@@ -31,8 +31,8 @@ namespace Project.Scripts.Game
             var slimePosition = slime.transform.position;
             
             var enemyZSpawnPoint = new Vector3(slimePosition.x, 0, slimePosition.z + enemySpawnDistance);
-
-            if (_waveNum != enemyPrefabs.Count)
+            
+            if (_waveNum <= enemyPrefabs.Count)
             {
                 _enemy = Instantiate(enemyPrefabs[_waveNum - 1]);
             }
